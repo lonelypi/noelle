@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -48,7 +48,6 @@
 				2FA668D2C8476383004D283D /* Pods-noelle-project.debug.xcconfig */,
 				5D8EA68E604764A9730768AF /* Pods-noelle-project.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -58,6 +57,23 @@
 				3244921B290D2F653E6F332D /* Pods_noelle_project.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE67D2BC24F4778D00425A73 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC4872824E2B5AB00D4A3D5 /* Main.storyboard */,
+				CEC4872D24E2B5AD00D4A3D5 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE67D2BD24F477A400425A73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEC4872624E2B5AB00D4A3D5 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		CEC4871624E2B5AB00D4A3D5 = {
@@ -83,10 +99,9 @@
 			children = (
 				CEC4872224E2B5AB00D4A3D5 /* AppDelegate.swift */,
 				CEC4872424E2B5AB00D4A3D5 /* SceneDelegate.swift */,
-				CEC4872624E2B5AB00D4A3D5 /* ViewController.swift */,
-				CEC4872824E2B5AB00D4A3D5 /* Main.storyboard */,
+				CE67D2BD24F477A400425A73 /* Controller */,
+				CE67D2BC24F4778D00425A73 /* View */,
 				CEC4872B24E2B5AD00D4A3D5 /* Assets.xcassets */,
-				CEC4872D24E2B5AD00D4A3D5 /* LaunchScreen.storyboard */,
 				CEC4873024E2B5AD00D4A3D5 /* Info.plist */,
 			);
 			path = "noelle-project";
