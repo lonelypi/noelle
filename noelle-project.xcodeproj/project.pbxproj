@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6767B396B5D2247FA05CCA58 /* Pods_noelle_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3244921B290D2F653E6F332D /* Pods_noelle_project.framework */; };
 		CEC4872324E2B5AB00D4A3D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC4872224E2B5AB00D4A3D5 /* AppDelegate.swift */; };
 		CEC4872524E2B5AB00D4A3D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC4872424E2B5AB00D4A3D5 /* SceneDelegate.swift */; };
 		CEC4872724E2B5AB00D4A3D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC4872624E2B5AB00D4A3D5 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FA668D2C8476383004D283D /* Pods-noelle-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-noelle-project.debug.xcconfig"; path = "Target Support Files/Pods-noelle-project/Pods-noelle-project.debug.xcconfig"; sourceTree = "<group>"; };
+		3244921B290D2F653E6F332D /* Pods_noelle_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_noelle_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D8EA68E604764A9730768AF /* Pods-noelle-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-noelle-project.release.xcconfig"; path = "Target Support Files/Pods-noelle-project/Pods-noelle-project.release.xcconfig"; sourceTree = "<group>"; };
 		CEC4871F24E2B5AB00D4A3D5 /* noelle-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "noelle-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC4872224E2B5AB00D4A3D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC4872424E2B5AB00D4A3D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6767B396B5D2247FA05CCA58 /* Pods_noelle_project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6FD0E2A7B3791A074A27DC6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FA668D2C8476383004D283D /* Pods-noelle-project.debug.xcconfig */,
+				5D8EA68E604764A9730768AF /* Pods-noelle-project.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		70C38518B5346B4E0F80A13A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3244921B290D2F653E6F332D /* Pods_noelle_project.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CEC4871624E2B5AB00D4A3D5 = {
 			isa = PBXGroup;
 			children = (
 				CEC4872124E2B5AB00D4A3D5 /* noelle-project */,
 				CEC4872024E2B5AB00D4A3D5 /* Products */,
+				6FD0E2A7B3791A074A27DC6A /* Pods */,
+				70C38518B5346B4E0F80A13A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEC4873324E2B5AD00D4A3D5 /* Build configuration list for PBXNativeTarget "noelle-project" */;
 			buildPhases = (
+				13232D6855AC1F4CE40C35E0 /* [CP] Check Pods Manifest.lock */,
 				CEC4871B24E2B5AB00D4A3D5 /* Sources */,
 				CEC4871C24E2B5AB00D4A3D5 /* Frameworks */,
 				CEC4871D24E2B5AB00D4A3D5 /* Resources */,
+				7E74F1331EF27722C3174146 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13232D6855AC1F4CE40C35E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-noelle-project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E74F1331EF27722C3174146 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-noelle-project/Pods-noelle-project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-noelle-project/Pods-noelle-project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-noelle-project/Pods-noelle-project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEC4871B24E2B5AB00D4A3D5 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		CEC4873424E2B5AD00D4A3D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FA668D2C8476383004D283D /* Pods-noelle-project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		CEC4873524E2B5AD00D4A3D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D8EA68E604764A9730768AF /* Pods-noelle-project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
