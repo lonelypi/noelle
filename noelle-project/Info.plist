@@ -53,6 +53,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>ColorPurple</key>
+	<string>#e8d3ff</string>
+	<key>ColorPurpleDark</key>
+	<string>#8c52ff</string>
+	<key>ColorBlue</key>
+	<string>#deecff</string>
+	<key>ColorBlueDarkSoft</key>
+	<string>#c6cfff</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
